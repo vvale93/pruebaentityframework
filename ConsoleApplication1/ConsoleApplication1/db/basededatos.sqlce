@@ -1,0 +1,23 @@
+﻿create table Perfiles
+(
+	ID_Perfil	int 	not null	identity,
+	Descripcion nvarchar(50),
+	constraint PK_Perfiles primary key (ID_Perfil)
+)
+go
+
+create table Usuarios
+(
+	Login	nvarchar(20) 	not null,
+	FechaUltimoLogin	datetime,
+	IntentosInvalidos int,
+	ID_Perfil	int 	not null,
+	constraint PK_Usuarios primary key (Login),
+	constraint FK_Usuarios_Perfiles foreign key (ID_Perfil) 
+	references Perfiles (ID_Perfil)
+)
+go
+
+insert into Perfiles (Descripcion) values ('root')
+select * from Perfiles
+select * from Usuarios

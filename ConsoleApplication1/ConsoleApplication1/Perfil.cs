@@ -4,14 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Entidades
 {
-    public class Perfil
+   public class Perfil
     {
         public int IDPerfil { get; set; }
-        public string Nombre { get; set; }
-
-
-
+        public string Descripcion { get; set; }
     }
 }
