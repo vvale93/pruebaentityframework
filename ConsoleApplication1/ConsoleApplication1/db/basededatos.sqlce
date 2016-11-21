@@ -21,3 +21,5 @@ go
 insert into Perfiles (Descripcion) values ('root')
 select * from Perfiles
 select * from Usuarios
+
+insert into Usuarios (Login, ID_Perfil) values ('Pitusas', 1)

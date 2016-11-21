@@ -10,5 +10,7 @@ namespace Entidades
     {
         public int IDPerfil { get; set; }
         public string Descripcion { get; set; }
+
+        public virtual HashSet<Usuario> Usuarios { get; set; }
     }
 }
